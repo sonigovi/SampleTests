@@ -8,9 +8,9 @@ import javax.activation.*;
 class SendAttachment{
  public static void main(String [] args){
 
-  String to="sonoojaiswal1987@gmail.com";//change accordingly
-  final String user="sonoojaiswal@javatpoint.com";//change accordingly
-  final String password="xxxxx";//change accordingly
+  String to="govind.soni@capgemini.com";//change accordingly
+  final String user="govind.soni@gmail.com";//change accordingly
+  final String password="Aman@2002";//change accordingly
  
   //1) get the session object   
   Properties properties = System.getProperties();
