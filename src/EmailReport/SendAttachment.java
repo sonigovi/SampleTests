@@ -4,6 +4,7 @@ import java.util.*;
 import javax.mail.*;
 import javax.mail.internet.*;
 import javax.activation.*;
+import java.io.*;
 
 class SendAttachment{
  public static void main(String [] args){
