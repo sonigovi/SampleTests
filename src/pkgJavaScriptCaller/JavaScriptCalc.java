@@ -1,13 +1,26 @@
 package pkgJavaScriptCaller;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import javax.script.Invocable;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
 public class JavaScriptCalc {
     public static void main(String[] args) throws Exception {
-        String scriptPath = "C:/Users/gosoni/git/SampleTests/javaScripts/calculator.js";
+        String current = new java.io.File(".").getCanonicalPath();
+        System.out.println("Current dir:" + current);
+        String currentDir = System.getProperty("user.dir");
+        System.out.println("Current dir using System:" + currentDir);
+
+        Path currentRelativePath = Paths.get("");
+        String s = currentRelativePath.toAbsolutePath().toString();
+        System.out.println("Current relative path is: " + s);
+
+        String scriptPath = s.replace("\\", "/") + "/javaScripts/calculator.js";
         System.out.println(scriptPath);
+
         ScriptEngineManager manager = new ScriptEngineManager();
         ScriptEngine engine = manager.getEngineByName("JavaScript");
 
